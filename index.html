@@ -1,0 +1,634 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Quiz Plus - An ultimate solution for Quiz/Exam/Survey</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="Sangib Kumar Saha">
+	<meta name="copyright" content="Sangib Kumar Saha">
+	<meta name="generator" content="Documenter v2.0 https://evp.to/documenter">
+	<meta name="date" content="2021-06-26T00:00:00+02:00">
+
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+
+</head>
+<body class="documenter-project-quiz-plus">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#project_description" title="Project description">Project description</a></li>
+			<li><a href="#project_requirement" title="Project Requirement">Project Requirement</a></li>
+			<li><a href="#credentials" title="Credentials">Credentials</a></li>
+			<li><a href="#set_up_quizplusapi" title="Set up QuizPlusApi">Set up QuizPlusApi</a></li>
+			<li><a href="#set_up_quizplusclient" title="Set up QuizPlusClient">Set up QuizPlusClient</a></li>
+			<li><a href="#all_menus" title="All Menus">All Menus</a></li>
+			<li><a href="#dashboard" title="Dashboard">Dashboard</a></li>
+			<li><a href="#menus" title="Menus">Menus</a></li>
+			<li><a href="#roles" title="Roles">Roles</a></li>
+			<li><a href="#users" title="Users">Users</a></li>
+			<li><a href="#quiz_exam_survey" title="Quiz/Exam/Survey">Quiz/Exam/Survey</a></li>
+			<li><a href="#questions" title="Questions">Questions</a></li>
+			<li><a href="#reports" title="Reports">Reports</a></li>
+			<li><a href="#certificate_templates" title="Certificate Templates">Certificate Templates</a></li>
+			<li><a href="#app_settings" title="App Settings">App Settings</a></li>
+			<li><a href="#conclusion" title="Conclusion">Conclusion</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Sangib Kumar Saha 2021<br>
+		made with the <a href="https://evp.to/documenter">Documenter v2.0</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Quiz Plus</h1>
+	<h2>An ultimate solution for Quiz/Exam/Survey</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 06/25/2021</li>
+	<li>latest update: 06/26/2021</li>
+	<li>by: Sangib Kumar Saha</li>
+	
+	<li>email: <a href="mailto:&#115;&#97;&#110;&#103;&#105;&#98;&#114;&#117;&#115;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#97;&#110;&#103;&#105;&#98;&#114;&#117;&#115;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, feel free to email me.</p>
+	</section>
+
+	<section id="project_description">
+	<div class="page-header"><h3>Project description</h3><hr class="notop"></div>
+<div>
+	<p>
+		<strong>Quiz Plus</strong> is developed for your institutions like Schools,Colleges,Coaching centers,Companies or any other institutes who want to take online or offline (in case of LAN) Quizes, Exams, Tests, Competitions, Challenges or Surveys.</p>
+	<p>
+		<strong>Quiz Plus</strong> is a single page web application developed by Vue.js with .NET core 5 API and you have flexibility to choose Sql server, Mysql, Sqlite, PostgreSql or Oracle 12c+ as database provider.</p>
+</div>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<div>
+	&nbsp;</div>
+</section>
+<section id="project_requirement">
+	<div class="page-header"><h3>Project Requirement</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Visual Studio Code (preffered) / Visual Studio 2019.</p>
+	</li>
+	<li>
+		<p>
+			Database provider software (SQL Server / MySql / Sqlite / PostgreSql / Oracle).</p>
+	</li>
+</ul>
+</section>
+<section id="credentials">
+	<div class="page-header"><h3>Credentials</h3><hr class="notop"></div>
+<p>
+	For Admin access, Username:admin@quizPlus.com&nbsp; Password:12345678</p>
+<p>
+	For Student access, Username:student@quizPlus.com Password:12345678</p>
+</section>
+<section id="set_up_quizplusapi">
+	<div class="page-header"><h3>Set up QuizPlusApi</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Open QuizPlusApi project on Visual studio code.On <strong>appsettings.json</strong> file you will find five connection strings for five different database connectivity. Replace the connection string by your one.</p>
+	</li>
+</ul>
+<div>
+	<pre class="prettyprint lang-js linenums">
+&quot;ConnectionStrings&quot;: {
+
+    &quot;ApiConnStringMssql&quot;: &quot;data source=Sangib-PC;initial catalog=QuizPlusDB;
+     persist security info=True;Integrated Security=SSPI;&quot;,
+
+    &quot;ApiConnStringMysql&quot;: &quot;server=localhost;port=3306;database=QuizPlusDB;user=root;&quot;,
+
+    &quot;ApiConnStringOracle&quot;: &quot;Data Source=(DESCRIPTION=(ADDRESS_LIST=
+    (ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))  
+    (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orclpdb)));User Id=root;Password=root;&quot;,
+
+    &quot;ApiConnStringSqlite&quot;: &quot;Data Source=QuizPlusDB.db;&quot;,
+
+    &quot;ApiConnStringPostgreSql&quot;: &quot;Server=127.0.0.1;Port=5432;Database=QuizPlusDB;
+    User Id=postgres;Password=postgres;&quot;
+
+  }</pre>
+</div>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<p>
+			Then open <strong>Startup.cs</strong> file, On ConfigureServices method you will see five AppDbContextPool for five Connection Strings that already have on appsettings.json file. Un-Comment your required one and keep other four as commented.Have a look to the below code.I only un-comment the Mysql portion because i used Mysql DB here.</p>
+	</li>
+</ul>
+<div>
+	<pre class="prettyprint lang-js linenums">
+public void ConfigureServices(IServiceCollection services)
+
+        {
+            //Sql Server Connection String
+            /* services.AddDbContextPool&lt;AppDbContext&gt;(opt =&gt; opt.UseSqlServer
+            (Configuration.GetConnectionString(&quot;ApiConnStringMssql&quot;))); */
+
+
+            //Mysql Connection String
+            services.AddDbContextPool&lt;AppDbContext&gt;(opt=&gt;opt.UseMySql
+            (Configuration.GetConnectionString(&quot;ApiConnStringMysql&quot;)));
+
+            //Sqlite Connection String
+            /* services.AddDbContextPool&lt;AppDbContext&gt;(opt=&gt;opt.UseSqlite
+            (Configuration.GetConnectionString(&quot;ApiConnStringSqlite&quot;))); */
+
+
+            //PostgreSql Connection String
+            /* services.AddDbContextPool&lt;AppDbContext&gt;(opt=&gt;opt.UseNpgsql
+            (Configuration.GetConnectionString(&quot;ApiConnStringPostgreSql&quot;))); */
+
+
+            //Oracle Connection String
+            /* services.AddDbContextPool&lt;AppDbContext&gt;(opt=&gt;opt.UseOracle
+            (Configuration.GetConnectionString(&quot;ApiConnStringOracle&quot;))); */ </pre>
+</div>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<p>
+			Now Open terminal on VS Code and write below commands&nbsp; &nbsp; &nbsp;</p>
+	</li>
+</ul>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;dotnet ef migrations add &lt;MigrationName&gt;</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;dotnet ef database update</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;dotnet run</p>
+<ul>
+	<li>
+		<p>
+			After successful build a folder named Migrations should create on project structure and a database named&nbsp; &nbsp;QuizPlusDB &nbsp;should create with seed data to your MySQL server (if you use MSSQL then you should check to Sql Server and so on for other databases). After executing &quot;dotnet run&quot; command you should see that your API listening at&nbsp;<strong>http://localhost:5001/</strong>.Navigate to the link to see the swagger Api documentation UI.</p>
+	</li>
+</ul>
+<ul>
+	<li>
+		<p>
+			You can check the Swagger API documentation UI by navigating&nbsp;http://localhost:5001/.First go to the&nbsp;<strong>/api/User/GetLoginInfo/{email}/{password} </strong>method from documentation page&nbsp;then enter email and password as i mentioned eairlier, a token will be generated here. Use this token to authorize the api by clicking the Authorize button at the top right and header value format example: <strong>&quot;Bearer TokenText&quot;</strong>.&nbsp;Then you will able to check all the methods as expected.</p>
+	</li>
+</ul>
+<ul>
+	<li>
+		<p>
+			You can change token expire time from UserController GenerateJwtToken method.Currently it is set to 360 minutes.</p>
+	</li>
+</ul>
+<div>
+	<pre>
+        string GenerateJwtToken(UserInfo userInfo)
+        {
+            var securityKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes
+                           (_config[&quot;Jwt:SecretKey&quot;]));
+            var credentials = new SigningCredentials(securityKey, 
+                              SecurityAlgorithms.HmacSha256);
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, userInfo.UserId.ToString()),
+                new Claim(&quot;fullName&quot;, userInfo.FullName.ToString()),
+                new Claim(&quot;role&quot;,userInfo.RoleName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            };
+            var token = new JwtSecurityToken(
+                issuer: _config[&quot;Jwt:Issuer&quot;],
+                audience: _config[&quot;Jwt:Audience&quot;],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(360),
+                signingCredentials: credentials
+            );
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }     <span style="font-family: Arial, Verdana, sans-serif;">                                                               </span></pre>
+</div>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<p>
+			After first migration all the project specific data will insert to your underlying database through your Models-&gt;AppDBContext.cs class OnModelCreating Seed method.</p>
+	</li>
+</ul>
+<pre class="prettyprint lang-js linenums">
+        protected override void OnModelCreating(ModelBuilder modelBuilder)   
+        {   
+            modelBuilder.Seed();//use this for Sql server,Mysql,Sqlite,Oracle and PostgreSql
+        }</pre>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<p>
+			This project used database driven role based authorization. Through migration data you will get two roles, <strong>Admin and Student</strong>. You can add more role from Roles menu after running the Client project. These role names are used in Authorize attribute on Api project to authorize that particular method.</p>
+	</li>
+	<li>
+		<p>
+			In <strong>appSettings.json</strong> file there is a <strong>MailSettings object</strong>. Update your Email &amp; Password from here.</p>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="set_up_quizplusclient">
+	<div class="page-header"><h3>Set up QuizPlusClient</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Open QuizPlusClient on Visual Studio Code.On terminal first write <strong>&quot;npm install&quot;</strong>, it will add node modules to project then write <strong>&quot;npm run serve&quot;</strong>.</p>
+	</li>
+</ul>
+<ul>
+	<li>
+		<p>
+			Now open config.js file, you should see a hostname here which is set to <strong>http://localhost:5001</strong>. Actually QuizPlusApi project is running here.Change this url in case of actual hosting.</p>
+	</li>
+</ul>
+<ul>
+	<li>
+		<p>
+			After doing above settings your client project will be running at <strong>http://localhost:8080</strong></p>
+	</li>
+</ul>
+</section>
+<section id="all_menus">
+	<div class="page-header"><h3>All Menus</h3><hr class="notop"></div>
+<p>
+	This App has below menus&nbsp;</p>
+<ul>
+	<li>
+		<p>
+			Dashboard</p>
+	</li>
+	<li>
+		<p>
+			Menus</p>
+	</li>
+	<li>
+		<p>
+			Roles</p>
+	</li>
+	<li>
+		<p>
+			Users</p>
+	</li>
+	<li>
+		<p>
+			Quiz/Exam/Survey</p>
+	</li>
+	<li>
+		<p>
+			Questions</p>
+	</li>
+	<li>
+		<p>
+			Reports</p>
+	</li>
+	<li>
+		<p>
+			Certificate Templates</p>
+	</li>
+	<li>
+		<p>
+			App Settings</p>
+	</li>
+</ul>
+<p>
+	we will discuss briefly each of the menus.</p>
+</section>
+<section id="dashboard">
+	<div class="page-header"><h3>Dashboard</h3><hr class="notop"></div>
+<p>
+	In Admin Dashboard, application status will show by different charts &amp; data. Charts are based on different data like</p>
+<ul>
+	<li>
+		<p>
+			Quiz Participation (Date wise)</p>
+	</li>
+	<li>
+		<p>
+			Participation (Quiz Topic wise)</p>
+	</li>
+	<li>
+		<p>
+			Browsing history (Month wise)</p>
+	</li>
+	<li>
+		<p>
+			Browsing history (Depends on browser)</p>
+	</li>
+	<li>
+		<p>
+			Browsing history (Operating system wise)</p>
+	</li>
+	<li>
+		<p>
+			Login (Date wise)</p>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	In Student Dashboard, all above charts are available only for that logged in student and on top of all charts there will be a list of available quiz/exam/survey.</p>
+</section>
+<section id="menus">
+	<div class="page-header"><h3>Menus</h3><hr class="notop"></div>
+<p>
+	Here you find a list of all menus of this App. To add a new menu you have to fill below fields</p>
+<ol>
+	<li>
+		<p>
+			Menu Title&nbsp;(No duplicate Menu Title is accepted)</p>
+	</li>
+	<li>
+		<p>
+			URL&nbsp;(No duplicate URL is accepted)</p>
+	</li>
+	<li>
+		<p>
+			Order No. (No duplicate order no. is accepted)</p>
+	</li>
+	<li>
+		<p>
+			Icon (Only material design icon is allowed, browse this link to find more icons&nbsp;<strong>https://fonts.google.com/icons?selected=Material+Icons</strong>)</p>
+	</li>
+</ol>
+</section>
+<section id="roles">
+	<div class="page-header"><h3>Roles</h3><hr class="notop"></div>
+<p>
+	You will find a list of two roles (Admin &amp; Student) initially. These two roles are restricted to modify and delete because these two roles are used for many configuration issue.</p>
+<p>
+	Anyway you can add new roles and can modify or delete them as per your need.&nbsp;&nbsp;</p>
+</section>
+<section id="users">
+	<div class="page-header"><h3>Users</h3><hr class="notop"></div>
+<p>
+	Initially you will find two users here for testing purpose. You can modify those and can add new users from here.</p>
+</section>
+<section id="quiz_exam_survey">
+	<div class="page-header"><h3>Quiz/Exam/Survey</h3><hr class="notop"></div>
+<p>
+	It is the starting point of a new&nbsp;Quiz/Exam/Survey. You can create new Exam or quiz or survey by filling below fields,</p>
+<ol>
+	<li>
+		<p>
+			Title (Title of your&nbsp;Quiz/Exam/Survey, No duplicate is accepted)</p>
+	</li>
+	<li>
+		<p>
+			Mark Option (Two options available i.e Question wise &amp; No marks(survey), actually here you will define whether it is an marks based exam or an survey without marks).</p>
+	</li>
+	<li>
+		<p>
+			Multiple Attempt ( Check this only If you allow your students to take a quiz/exam/survey multiple times)</p>
+	</li>
+	<li>
+		<p>
+			Multiple Answer ( Check this if you want to set multiple answers for one question)</p>
+	</li>
+	<li>
+		<p>
+			Multiple Attempt (&nbsp;Check this only If you allow your students to select multiple answer for one question)</p>
+	</li>
+	<li>
+		<p>
+			Marks (only visible for&nbsp;Question wise Mark Option)</p>
+	</li>
+	<li>
+		<p>
+			Required Time&nbsp;(only visible for&nbsp;Question wise Mark Option and must be set in minutes)</p>
+	</li>
+	<li>
+		<p>
+			Pass Marks&nbsp;(only visible for&nbsp;Question wise Mark Option and one student have to pass for getting a certificate)</p>
+	</li>
+	<li>
+		<p>
+			Schedule Start Date ( in case of schedule a exam/quiz)</p>
+	</li>
+	<li>
+		<p>
+			Schedule End Date&nbsp;( in case of schedule a exam/quiz)</p>
+	</li>
+	<li>
+		<p>
+			Certificate Template ( select one if you want to give certificate)</p>
+	</li>
+	<li>
+		<p>
+			Correct Answer display to students ( Check this if you allow correct answers to student result sheet)</p>
+	</li>
+	<li>
+		<p>
+			Participant Option ( All registered students or you may set a comma seperated email list like &#97;&#98;&#99;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;, &#120;&#121;&#122;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;,&#100;&#101;&#102;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#109;)</p>
+	</li>
+</ol>
+</section>
+<section id="questions">
+	<div class="page-header"><h3>Questions</h3><hr class="notop"></div>
+<p>
+	List of Quiz/Exam/Survey will find here and you can add questions for each Quiz by filling below fields</p>
+<ol>
+	<li>
+		<p>
+			Question (No duplicate is accepted for a particular quiz)</p>
+	</li>
+	<li>
+		<p>
+			Code Snippet ( Check this only if you want set pre-formatted questions like Programming language code or anything you want keep source format)</p>
+	</li>
+	<li>
+		<p>
+			Question Video ( Only <strong>youtube embed video</strong> is allowed)&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Question Image&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Option-A</p>
+	</li>
+	<li>
+		<p>
+			Option-B</p>
+	</li>
+	<li>
+		<p>
+			Option-C (Optional)</p>
+	</li>
+	<li>
+		<p>
+			Option-D&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Option-E&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Correct Answer</p>
+	</li>
+	<li>
+		<p>
+			Answer Explanation&nbsp;(Optional)</p>
+	</li>
+</ol>
+</section>
+<section id="reports">
+	<div class="page-header"><h3>Reports</h3><hr class="notop"></div>
+<p>
+	All your students exam records will find here. You can filter those and can download those on PDF &amp; Excel .</p>
+</section>
+<section id="certificate_templates">
+	<div class="page-header"><h3>Certificate Templates</h3><hr class="notop"></div>
+<p>
+	Design your own templates as much you can and allow them to use as centificate template .</p>
+<p>
+	Avaiable fields</p>
+<ol>
+	<li>
+		<p>
+			Certificate Title</p>
+	</li>
+	<li>
+		<p>
+			Certificate Top Header</p>
+	</li>
+	<li>
+		<p>
+			Certificate Main Text</p>
+	</li>
+	<li>
+		<p>
+			Top Left Logo&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Top Right Logo&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Bottom Logo&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Background Image&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Signature Left Image&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Signature Left Text&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Signature Right Image&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Signature Right Text&nbsp;(Optional)</p>
+	</li>
+	<li>
+		<p>
+			Publish Date&nbsp;(Optional)</p>
+	</li>
+</ol>
+<p>
+	&nbsp;</p>
+<p>
+	There is a list (Student Name, Mobile, Address, Title etc.) on top of all fields. You can drag them and drop on any of the text fields as per your need.&nbsp;&nbsp;</p>
+</section>
+<section id="app_settings">
+	<div class="page-header"><h3>App Settings</h3><hr class="notop"></div>
+<p>
+	Settings have two categories, General Settings &amp; Color Settings.</p>
+<p>
+	In&nbsp;General Settings there will be some initial values and you can change them as per your preference.</p>
+<p>
+	In Color Settings, Initially all are empty and you can play with App Bar, Footer and Body Colors.</p>
+</section>
+<section id="conclusion">
+	<div class="page-header"><h3>Conclusion</h3><hr class="notop"></div>
+<p>
+	Once again, thank you so much for purchasing this script. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this script. I&#39;ll do my best to assist. If you have a more general question relating to the scripts on Codecanyon, you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section.</p>
+<p>
+	<strong>Sangib Kumar Saha</strong></p>
+</section>
+
+	</div>
+</body>
+</html>
