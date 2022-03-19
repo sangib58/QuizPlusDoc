@@ -13,7 +13,7 @@
 	<meta name="author" content="Sangib Kumar Saha">
 	<meta name="copyright" content="Sangib Kumar Saha">
 	<meta name="generator" content="Documenter v2.0 https://evp.to/documenter">
-	<meta name="date" content="2021-09-26T00:00:00+02:00">
+	<meta name="date" content="2022-03-19T00:00:00+01:00">
 
 	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
 	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
@@ -79,9 +79,11 @@
 			<li><a href="#credentials" title="Credentials">Credentials</a></li>
 			<li><a href="#set_up_quizplusapi" title="Set up QuizPlusApi">Set up QuizPlusApi</a></li>
 			<li><a href="#set_up_quizplusclient" title="Set up QuizPlusClient">Set up QuizPlusClient</a></li>
-			<li><a href="#payment_testing" title="Payment Testing">Payment Testing</a></li>
 			<li><a href="#server_requirements" title="Server Requirements">Server Requirements</a></li>
-			<li><a href="#all_menus" title="All Menus">All Menus</a></li>
+			<li><a href="#publish_to_server" title="Publish to Server">Publish to Server</a></li>
+			<li><a href="#additional_settings" title="Additional Settings">Additional Settings</a></li>
+			<li><a href="#payment_testing" title="Payment Testing">Payment Testing</a></li>
+			<li><a href="#app_features" title="App Features">App Features</a></li>
 			<li><a href="#dashboard" title="Dashboard">Dashboard</a></li>
 			<li><a href="#menus" title="Menus">Menus</a></li>
 			<li><a href="#roles" title="Roles">Roles</a></li>
@@ -95,7 +97,7 @@
 			<li><a href="#conclusion" title="Conclusion">Conclusion</a></li>
 
 		</ul>
-		<div id="documenter_copyright">Copyright Sangib Kumar Saha 2021<br>
+		<div id="documenter_copyright">Copyright Sangib Kumar Saha 2022<br>
 		made with the <a href="https://evp.to/documenter">Documenter v2.0</a>
 		</div>
 	</div>
@@ -109,7 +111,7 @@
 	<hr>
 	<ul>
 	<li>created: 06/25/2021</li>
-	<li>latest update: 09/26/2021</li>
+	<li>latest update: 03/19/2022</li>
 	<li>by: Sangib Kumar Saha</li>
 	
 	<li>email: <a href="mailto:&#115;&#97;&#110;&#103;&#105;&#98;&#114;&#117;&#115;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#97;&#110;&#103;&#105;&#98;&#114;&#117;&#115;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
@@ -241,13 +243,86 @@ public void ConfigureServices(IServiceCollection services)
 <ul>
 	<li>
 		<p>
-			After successful build a folder named Migrations should create on project structure and a database named&nbsp; &nbsp;QuizPlusDB &nbsp;should create with seed data to your MySQL server (if you use MSSQL then you should check to Sql Server and so on for other databases). After executing &quot;dotnet run&quot; command you should see that your API listening at&nbsp;<strong>http://localhost:5001/</strong>.Navigate to the link to see the swagger Api documentation UI.</p>
+			After successful build a folder named Migrations should create on project structure and a database named&nbsp; &nbsp;QuizPlusDB &nbsp;should create with seed data to your MySQL server (if you use MSSQL then you should check to Sql Server and so on for other databases). After executing &quot;dotnet run&quot; command you should see that your API listening at&nbsp;<strong>http://localhost:5001/</strong>.</p>
+	</li>
+</ul>
+</section>
+<section id="set_up_quizplusclient">
+	<div class="page-header"><h3>Set up QuizPlusClient</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Open QuizPlusClient on Visual Studio Code.On terminal first write <strong>&quot;npm install&quot;</strong>, it will add node modules to project then write <strong>&quot;npm run serve&quot;</strong>.</p>
 	</li>
 </ul>
 <ul>
 	<li>
 		<p>
-			You can check the Swagger API documentation UI by navigating&nbsp;http://localhost:5001/.First go to the&nbsp;<strong>/api/User/GetLoginInfo/{email}/{password} </strong>method from documentation page&nbsp;then enter email and password as i mentioned eairlier, a token will be generated here. Use this token to authorize the api by clicking the Authorize button at the top right and header value format example: <strong>&quot;Bearer TokenText&quot;</strong>.&nbsp;Then you will able to check all the methods as expected.</p>
+			Now open config.js file, you should see a hostname here which is set to <strong>http://localhost:5001</strong>. Actually QuizPlusApi project is running here.Change this url in case of actual hosting.</p>
+	</li>
+</ul>
+<ul>
+	<li>
+		<p>
+			After doing above settings your client project will be running at <strong>http://localhost:8080</strong></p>
+	</li>
+</ul>
+</section>
+<section id="server_requirements">
+	<div class="page-header"><h3>Server Requirements</h3><hr class="notop"></div>
+<p>
+	For Local Windows Machine</p>
+<ul>
+	<li>
+		Node.js (Browse here to download <strong>https://nodejs.org/en/</strong>)</li>
+	<li>
+		.NET 5 SDK (Browse here to download&nbsp; <strong>https://dotnet.microsoft.com/download</strong>)</li>
+	<li>
+		Sql server / Mysql / Sqlite / PostgreSql / Oracle (based on your preference)</li>
+</ul>
+<p>
+	<br>
+	For Windows Server with IIS</p>
+<ul>
+	<li>
+		.NET 5 hosting bundle (Browse here to download <strong>https://dotnet.microsoft.com/download/dotnet/5.0/runtime</strong>)</li>
+	<li>
+		URL Rewrite (Browse here to download&nbsp; <strong>https://www.iis.net/downloads/microsoft/url-rewrite</strong>)</li>
+	<li>
+		Sql server / Mysql / Sqlite / PostgreSql / Oracle (based on your preference)</li>
+</ul>
+<p>
+	&nbsp;</p>
+</section>
+<section id="publish_to_server">
+	<div class="page-header"><h3>Publish to Server</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Open Api project on Visual studio code and on terminal write below command</p>
+	</li>
+</ul>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt; dotnet publish</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; you will get a publish directory.Copy that publish directory and host it on a server port or url.</p>
+<ul>
+	<li>
+		<p>
+			Open Client project on VS Code and copy that port or url on which the Api is hosted &amp; set that port or url on hostname to config.js file. Now open terminal and write</p>
+	</li>
+</ul>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&gt;npm run build</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; you will get a dist folder. Publish that on server.</p>
+</section>
+<section id="additional_settings">
+	<div class="page-header"><h3>Additional Settings</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			If you already done with Api set up, you can check the Swagger API documentation UI by navigating&nbsp;http://localhost:5001/.First go to the&nbsp;<strong>/api/User/GetLoginInfo/{email}/{password}&nbsp;</strong>method from documentation page&nbsp;then enter email and password as i mentioned eairlier, a token will be generated here. Use this token to authorize the api by clicking the Authorize button at the top right and header value format example:&nbsp;<strong>&quot;Bearer TokenText&quot;</strong>.&nbsp;Then you will able to check all the methods as expected.</p>
 	</li>
 </ul>
 <ul>
@@ -257,7 +332,7 @@ public void ConfigureServices(IServiceCollection services)
 	</li>
 </ul>
 <div>
-	<pre>
+	<pre style="background-image: url(&quot;../../_img/pre_bg.png&quot;);">
         string GenerateJwtToken(UserInfo userInfo)
         {
             var securityKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes
@@ -289,7 +364,7 @@ public void ConfigureServices(IServiceCollection services)
 			After first migration all the project specific data will insert to your underlying database through your Models-&gt;AppDBContext.cs class OnModelCreating Seed method.</p>
 	</li>
 </ul>
-<pre class="prettyprint lang-js linenums">
+<pre class="prettyprint lang-js linenums" style="background-image: url(&quot;../../_img/pre_bg.png&quot;);">
         protected override void OnModelCreating(ModelBuilder modelBuilder)   
         {   
             modelBuilder.Seed();//use this for Sql server,Mysql,Sqlite,Oracle and PostgreSql
@@ -299,28 +374,7 @@ public void ConfigureServices(IServiceCollection services)
 <ul>
 	<li>
 		<p>
-			This project used database driven role based authorization. Through migration data you will get two roles, <strong>Admin and Student</strong>. You can add more role from Roles menu after running the Client project. These role names are used in Authorize attribute on Api project to authorize that particular method.</p>
-	</li>
-</ul>
-</section>
-<section id="set_up_quizplusclient">
-	<div class="page-header"><h3>Set up QuizPlusClient</h3><hr class="notop"></div>
-<ul>
-	<li>
-		<p>
-			Open QuizPlusClient on Visual Studio Code.On terminal first write <strong>&quot;npm install&quot;</strong>, it will add node modules to project then write <strong>&quot;npm run serve&quot;</strong>.</p>
-	</li>
-</ul>
-<ul>
-	<li>
-		<p>
-			Now open config.js file, you should see a hostname here which is set to <strong>http://localhost:5001</strong>. Actually QuizPlusApi project is running here.Change this url in case of actual hosting.</p>
-	</li>
-</ul>
-<ul>
-	<li>
-		<p>
-			After doing above settings your client project will be running at <strong>http://localhost:8080</strong></p>
+			This project used database driven role based authorization. Through migration data you will get two roles,&nbsp;<strong>Admin and Student</strong>. You can add more role from Roles menu after running the Client project. These role names are used in Authorize attribute on Api project to authorize that particular method.</p>
 	</li>
 </ul>
 </section>
@@ -341,34 +395,8 @@ public void ConfigureServices(IServiceCollection services)
 <p>
 	To find more detail you can browse this link (<strong>https://stripe.com/docs/testing</strong>)</p>
 </section>
-<section id="server_requirements">
-	<div class="page-header"><h3>Server Requirements</h3><hr class="notop"></div>
-<p>
-	For Local Windows Machine</p>
-<ul>
-	<li>
-		Node.js (Browse here to download <strong>https://nodejs.org/en/</strong>)</li>
-	<li>
-		.NET 5 SDK (Browse here to download&nbsp; <strong>https://dotnet.microsoft.com/download</strong>)</li>
-	<li>
-		Sql server / Mysql / Sqlite / PostgreSql / Oracle (based on your preference)</li>
-</ul>
-<p>
-	<br>
-	For Windows Server with IIS</p>
-<ul>
-	<li>
-		.NET 5 hosting bundle (Browse here to download <strong>https://dotnet.microsoft.com/download/dotnet/5.0/runtime</strong>)</li>
-	<li>
-		URL Rewrite (Browse here to download&nbsp; <strong>https://www.iis.net/downloads/microsoft/url-rewrite</strong>)</li>
-	<li>
-		Sql server / Mysql / Sqlite / PostgreSql / Oracle (based on your preference)</li>
-</ul>
-<p>
-	&nbsp;</p>
-</section>
-<section id="all_menus">
-	<div class="page-header"><h3>All Menus</h3><hr class="notop"></div>
+<section id="app_features">
+	<div class="page-header"><h3>App Features</h3><hr class="notop"></div>
 <p>
 	This App has below menus&nbsp;</p>
 <ul>
@@ -453,38 +481,26 @@ public void ConfigureServices(IServiceCollection services)
 </section>
 <section id="menus">
 	<div class="page-header"><h3>Menus</h3><hr class="notop"></div>
-<p>
-	Here you find a list of all menus of this App. To add a new menu you have to fill below fields</p>
+<p>	Here you find a list of all menus of this App. To add a new menu you have to fill below fields</p>
 <ol>
-	<li>
-		<p>
-			Menu Title&nbsp;(No duplicate Menu Title is accepted)</p>
+	<li>		<p>			Menu Title&nbsp;(No duplicate Menu Title is accepted)</p>
 	</li>
-	<li>
-		<p>
-			URL&nbsp;(No duplicate URL is accepted)</p>
+	<li>		<p>			URL&nbsp;(No duplicate URL is accepted)</p>
 	</li>
-	<li>
-		<p>
-			Order No. (No duplicate order no. is accepted)</p>
+	<li>		<p>			Order No. (No duplicate order no. is accepted)</p>
 	</li>
-	<li>
-		<p>
-			Icon (Only material design icon is allowed, browse this link to find more icons&nbsp;<strong>https://fonts.google.com/icons?selected=Material+Icons</strong>)</p>
+	<li>		<p>			Icon (Only material design icon is allowed, browse this link to find more icons&nbsp;<strong>https://fonts.google.com/icons?selected=Material+Icons</strong>)</p>
 	</li>
 </ol>
 </section>
 <section id="roles">
 	<div class="page-header"><h3>Roles</h3><hr class="notop"></div>
-<p>
-	You will find a list of two roles (Admin &amp; Student) initially. These two roles are restricted to modify and delete because these two roles are used for many configuration issue.</p>
-<p>
-	Anyway you can add new roles and can modify or delete them as per your need.&nbsp;&nbsp;</p>
+<p>	You will find a list of two roles (Admin &amp; Student) initially. These two roles are restricted to modify and delete because these two roles are used for many configuration issue.</p>
+<p>	Anyway you can add new roles and can modify or delete them as per your need.&nbsp;&nbsp;</p>
 </section>
 <section id="users">
 	<div class="page-header"><h3>Users</h3><hr class="notop"></div>
-<p>
-	Initially you will find two users here for testing purpose. You can modify those and can add new users from here.</p>
+<p>	Initially you will find two users here for testing purpose. You can modify those and can add new users from here.</p>
 </section>
 <section id="category">
 	<div class="page-header"><h3>Category</h3><hr class="notop"></div>
@@ -560,165 +576,93 @@ public void ConfigureServices(IServiceCollection services)
 </section>
 <section id="questions">
 	<div class="page-header"><h3>Questions</h3><hr class="notop"></div>
-<p>
-	List of Quiz/Exam/Survey will find here and you can add questions for each Quiz by filling below fields</p>
+<p>	List of Quiz/Exam/Survey will find here and you can add questions for each Quiz by filling below fields</p>
 <ol>
-	<li>
-		<p>
-			Question ( No duplicate is accepted for a particular quiz)</p>
+	<li>		<p>			Question ( No duplicate is accepted for a particular quiz)</p>
 	</li>
-	<li>
-		<p>
-			Code Snippet ( Check this only if you want set pre-formatted questions like Programming language code or anything you want keep source format)</p>
+	<li>		<p>			Code Snippet ( Check this only if you want set pre-formatted questions like Programming language code or anything you want keep source format)</p>
 	</li>
-	<li>
-		<p>
-			Question Type ( MCQ &amp; Descriptive)</p>
+	<li>		<p>			Question Type ( MCQ &amp; Descriptive)</p>
 	</li>
-	<li>
-		<p>
-			Complexity Lavel (Easy, Medium &amp; Hard)</p>
+	<li>		<p>			Complexity Lavel (Easy, Medium &amp; Hard)</p>
 	</li>
-	<li>
-		<p>
-			Question Category(select one category from your existing category list)</p>
+	<li>		<p>			Question Category(select one category from your existing category list)</p>
 	</li>
-	<li>
-		<p>
-			Question Video (Only <strong>youtube embed video</strong> is allowed)&nbsp;(Optional)</p>
+	<li>		<p>			Question Video (Only <strong>youtube embed video</strong> is allowed)&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Question Image&nbsp;(Optional)</p>
+	<li>		<p>			Question Image&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Option-A</p>
+	<li>		<p>			Option-A</p>
 	</li>
-	<li>
-		<p>
-			Option-B</p>
+	<li>		<p>			Option-B</p>
 	</li>
-	<li>
-		<p>
-			Option-C (Optional)</p>
+	<li>		<p>			Option-C (Optional)</p>
 	</li>
-	<li>
-		<p>
-			Option-D&nbsp;(Optional)</p>
+	<li>		<p>			Option-D&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Option-E&nbsp;(Optional)</p>
+	<li>		<p>			Option-E&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Correct Answer</p>
+	<li>		<p>			Correct Answer</p>
 	</li>
-	<li>
-		<p>
-			Answer Explanation&nbsp;(Optional)</p>
+	<li>		<p>			Answer Explanation&nbsp;(Optional)</p>
 	</li>
 </ol>
-<p>
-	<strong>(8-12) applicable for MCQ questions only.</strong></p>
+<p>	<strong>(8-12) applicable for MCQ questions only.</strong></p>
 </section>
 <section id="examine_reports">
 	<div class="page-header"><h3>Examine & Reports</h3><hr class="notop"></div>
-<p>
-	All your students exam records will find here and examine options will visible for descriptive questions assessments. You can filter those and can download those on PDF,CSV &amp; Excel .</p>
+<p>	All your students exam records will find here and examine options will visible for descriptive questions assessments. You can filter those and can download those on PDF,CSV &amp; Excel .</p>
 </section>
 <section id="certificate_templates">
 	<div class="page-header"><h3>Certificate Templates</h3><hr class="notop"></div>
-<p>
-	Design your own templates as much you can and allow them to use as centificate template .</p>
-<p>
-	Avaiable fields</p>
+<p>	Design your own templates as much you can and allow them to use as centificate template .</p>
+<p>	Avaiable fields</p>
 <ol>
-	<li>
-		<p>
-			Certificate Title</p>
+	<li>		<p>			Certificate Title</p>
 	</li>
-	<li>
-		<p>
-			Certificate Top Header</p>
+	<li>		<p>			Certificate Top Header</p>
 	</li>
-	<li>
-		<p>
-			Certificate Main Text</p>
+	<li>		<p>			Certificate Main Text</p>
 	</li>
-	<li>
-		<p>
-			Top Left Logo&nbsp;(Optional)</p>
+	<li>		<p>			Top Left Logo&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Top Right Logo&nbsp;(Optional)</p>
+	<li>		<p>			Top Right Logo&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Bottom Logo&nbsp;(Optional)</p>
+	<li>		<p>			Bottom Logo&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Background Image&nbsp;(Optional)</p>
+	<li>		<p>			Background Image&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Signature Left Image&nbsp;(Optional)</p>
+	<li>		<p>			Signature Left Image&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Signature Left Text&nbsp;(Optional)</p>
+	<li>		<p>			Signature Left Text&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Signature Right Image&nbsp;(Optional)</p>
+	<li>		<p>			Signature Right Image&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Signature Right Text&nbsp;(Optional)</p>
+	<li>		<p>			Signature Right Text&nbsp;(Optional)</p>
 	</li>
-	<li>
-		<p>
-			Publish Date&nbsp;(Optional)</p>
+	<li>		<p>			Publish Date&nbsp;(Optional)</p>
 	</li>
 </ol>
-<p>
-	&nbsp;</p>
-<p>
-	There is a list (Student Name, Mobile, Address, Title etc.) on top of all fields. You can drag them and drop on any of the text fields as per your need.&nbsp;&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	There is a list (Student Name, Mobile, Address, Title etc.) on top of all fields. You can drag them and drop on any of the text fields as per your need.&nbsp;&nbsp;</p>
 </section>
 <section id="app_settings">
 	<div class="page-header"><h3>App Settings</h3><hr class="notop"></div>
-<p>
-	Total app settings including site logo, site favicon, site title, welcome message, copyright text, allow welcome email, allow FAQ, Exam Settings, Payment Settings, Email Settings, Color controls for Menu Bar , Header, Footer &amp; Body.</p>
+<p>	Total app settings including site logo, site favicon, site title, welcome message, copyright text, allow welcome email, allow FAQ, Exam Settings, Payment Settings, Email Settings, Color controls for Menu Bar , Header, Footer &amp; Body.</p>
 <ol>
-	<li>
-		General Settings (&nbsp;site logo, site favicon, site title, welcome message, copyright text, allow welcome email, allow FAQ)</li>
-	<li>
-		Exam Settings ( Browser refresh end the exam , site logo on exam page)</li>
-	<li>
-		Payment Settings ( Currency, currency symbol and stripe secret key are mendatory if you want to set price of a assessment. you can find detail about currency here&nbsp;https://stripe.com/docs/currencies)</li>
-	<li>
-		Email Settings&nbsp; &nbsp;</li>
+	<li>		General Settings (&nbsp;site logo, site favicon, site title, welcome message, copyright text, allow welcome email, allow FAQ)</li>
+	<li>		Exam Settings ( Browser refresh end the exam , site logo on exam page)</li>
+	<li>		Payment Settings ( Currency, currency symbol and stripe secret key are mendatory if you want to set price of a assessment. you can find detail about currency here&nbsp;https://stripe.com/docs/currencies)</li>
+	<li>		Email Settings&nbsp; &nbsp;</li>
 </ol>
-<ul>
-	<li>
-		For Gmail Port: 587 , Host: smtp.gmail.com . Also allow Less secure app access from Gmail Settings.</li>
-	<li>
-		For Yahoo Port: 587 , Host: smtp.mail.yahoo.com .Also for password need to generate specific app password from Account Security.</li>
-	<li>
-		For Gmail Port: 587 , Host: smtp-mail.outlook.com .</li>
+<ul>	<li>		For Gmail Port: 587 , Host: smtp.gmail.com . Also allow Less secure app access from Gmail Settings.</li>
+	<li>		For Yahoo Port: 587 , Host: smtp.mail.yahoo.com .Also for password need to generate specific app password from Account Security.</li>
+	<li>		For Gmail Port: 587 , Host: smtp-mail.outlook.com .</li>
 </ul>
-<p>
-	&nbsp; &nbsp; &nbsp; &nbsp; 5. Color Settings (&nbsp;Color controls for Menu Bar , Header, Footer &amp; Body)</p>
-<p>
-	&nbsp;</p>
-<p>
-	&nbsp;</p>
-<p>
-	&nbsp;</p>
+<p>	&nbsp; &nbsp; &nbsp; &nbsp; 5. Color Settings (&nbsp;Color controls for Menu Bar , Header, Footer &amp; Body)</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
 </section>
 <section id="conclusion">
 	<div class="page-header"><h3>Conclusion</h3><hr class="notop"></div>
